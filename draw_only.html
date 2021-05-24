@@ -1,0 +1,62 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>ちょいポンチ絵</title>
+	<link href="./draw.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<p class="noselect">
+		<label> <input id="drawing" type="checkbox"> Show/Hide Drawing Area</label>
+	</p>
+	<div id="wrap-draw-area">
+		<div id="cursor" class="hideDotCursor"></div>
+		<button id="black" class="color selected draw">Black</button>
+		<button id="darkgrey" class="color draw">Dark</button>
+		<button id="grey" class="color draw">Gray</button>
+		<button id="lightgrey" class="color draw">Light</button>
+		<button id="white" class="color draw">White</button>
+		<button id="red" class="color draw">Red</button>
+		<button id="orange" class="color draw">Orange</button>
+		<button id="blue" class="color draw">Blue</button>
+		<button id="eraser" class="color draw" value="40">ERASER</button>
+		<button id="clear" class="draw">Clear</button>
+		<button id="download" class="draw">Download</button>
+		<br>
+		<div id="wrap-edit-buttons">
+			<button id="editMode" class="draw">EDIT MODE</button>
+			<button id="delete" class="draw" disabled>Delete</button>
+			<button id="undo" class="draw" disabled>Undo</button>
+			<button id="redo" class="draw" disabled>Redo</button><br>
+		</div>
+
+		<div class="radio-wrapper">
+			<label class="draw"><input type="radio" id="5px" class="selectLineWidth draw" name="lineWidth" value="5"
+					checked>5px</label>
+			<label class="draw"><input type="radio" id="10px" class="selectLineWidth draw" name="lineWidth"
+					value="10">10px</label>
+			<label class="draw"><input type="radio" id="20px" class="selectLineWidth draw" name="lineWidth"
+					value="20">20px</label>
+			<label class="draw"><input type="radio" id="40px" class="selectLineWidth draw" name="lineWidth"
+					value="40">40px</label>
+		</div>
+		<br>
+
+		<div id="canvas-container"><canvas id="canvas"></canvas></div>
+	</div>
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0/fabric.min.js"></script>
+	<script src="./draw.js"></script>
+
+</body>
+
+</html>
