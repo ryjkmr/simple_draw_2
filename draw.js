@@ -188,15 +188,6 @@ document.addEventListener('DOMContentLoaded', function () { //windows.onloadは�
 
   });
 
-  //描画エリア全体の表示・非表示
-  document.getElementById("drawing").addEventListener("click", function (e) {
-    if (this.checked) {
-      document.getElementById("wrap-draw-area").style.display = "block";
-    } else {
-      document.getElementById("wrap-draw-area").style.display = "none";
-    }
-  });
-
   //deleteボタンの処理
   const deleteBtn = document.getElementById("delete");
 
@@ -312,91 +303,3 @@ document.addEventListener('DOMContentLoaded', function () { //windows.onloadは�
   }
 
 
-
-
-
-
-  //削除（canvas.remove()）のUNDO処理はイベントに頼らずじぶんでやる！
-  //キーボードで削除の時も同様。
-  // function deleteSelectedObjects() {
-  // var selection = canvas.getActiveObjects();
-  // canvas.discardActiveObject();
-  // const newSelection = new fabric.ActiveSelection(selection,
-  //   { canvas: canvas });
-  // canvas.setActiveObject(newSelection);
-  //   canvas.getActiveObjects().forEach(element => {
-  //     canvas.remove(element);
-  //   });
-  //   canvas.discardActiveObject();
-  //   canvas.requestRenderAll();
-  // }
-
-
-  // canvas.on('selection:created', function (options) {
-  //   console.log("selecton created");
-  // });
-
-
-
-
-
-
-  /* canvas.on('object:modified', function () {
-    console.log("object:modified");
-    // save();
-  });
-  
-  canvas.on('path:created', function () {
-    console.log("path:created");
-    // save();
-  });
-  
-  canvas.on('object:added', function () {
-    console.log("object:added");
-    // save();
-  });
-  
-  canvas.on('object:removed', function () {
-    console.log("object:removed");
-    // save();
-  });
-  
-  canvas.on('after:render', function () {
-    console.log("after:render");
-    // save();
-  }); */
-
-
-  // document.getElementById("b1").removeAttribute("disabled");
-  // if (document.getElementById("b1").disabled === true){
-  // document.getElementById("b1").setAttribute("disabled", true);
-
-
-});
-
-
-
-// document.getElementById("canvas-container")
-// window.addEventListener("keyup", () => {
-//   console.log("keyup");
-// });
-// 
-/*
-
-
-
-function deleteSelectedObjectsFromCanvas() {
-  var selection = canvas.getActiveObject();
-  if (selection.type === 'activeSelection') {
-    selection.forEachObject(function (element) {
-      console.log(element);
-      canvas.remove(element);
-    });
-  }
-  else {
-    canvas.remove(selection);
-  }
-  canvas.discardActiveObject();
-  canvas.requestRenderAll();
-}
-*/
